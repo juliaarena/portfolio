@@ -1,0 +1,120 @@
+/* ==========================================================================
+   1. FUENTE LOCAL (@font-face)
+   ========================================================================== */
+@font-face {
+  font-family: 'PPNeueMontreal-Regular';
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/PPNeueMontreal-Regular.woff2") format("woff2"),
+       url("../fonts/PPNeueMontreal-Regular.woff") format("woff");
+}
+
+/* ==========================================================================
+   5. HEADER
+   ========================================================================== */
+.header {
+  padding: 24px;
+}
+
+/* ==========================================================================
+   2. RESET Y REGLAS GLOBALES
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  text-rendering: optimizeLegibility;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* ==========================================================================
+   3. ESTILOS BASE DE LA PÁGINA
+   ========================================================================== */
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: #f0f0f0;
+  color: #838383;
+  font-family: 'PPNeueMontreal-Regular', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  letter-spacing: .0069444444vw;
+  line-height: 22px;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  overscroll-behavior: none;
+}
+
+/* Scrollbar Personalizado */
+html::-webkit-scrollbar {
+  width: 2px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: none;
+  border-left: 1px solid transparent;
+  border-radius: 0;
+  box-shadow: inset 1px 0 0 #0038ff;
+}
+
+html::-webkit-scrollbar-track {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* ==========================================================================
+   4. ESTRUCTURA Y CONTENEDORES
+   ========================================================================== */
+#smooth-wrapper {
+  inset: 0px;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+}
+
+#smooth-content {
+  box-sizing: border-box;
+  width: 100%;
+  overflow: visible;
+}
+
+/* Capas flotantes e interactivas */
+.content-imgs-hover,
+.content-imagenfija,
+#moving_div {
+  display: flex;
+}
+
+#moving_div.degradado {
+  position: absolute;
+  pointer-events: none;
+}
